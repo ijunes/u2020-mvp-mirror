@@ -1,3 +1,8 @@
+## Update notes for Mirror
+A sample project using Dagger2. The codebase is updated to make it previewable in Mirror Sandbox.  Related changes are in [this commit](https://github.com/jimulabs/u2020-mvp-mirror/commit/57081e840fbd62b45a0d32f77901fcae55b093ad)
+
+Below is the original README.
+
 U+2020-mvp
 ======
 
