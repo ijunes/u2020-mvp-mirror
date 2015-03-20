@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
-import com.jimulabs.mirrorsandbox.MirrorAnimatorSandbox;
+import com.jimulabs.mirrorsandbox.MirrorSandboxBase;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ import ru.ltst.u2020mvp.ui.gallery.GalleryView;
 /**
  * Created by lintonye on 15-02-02.
  */
-public class GalleryViewBox extends MirrorAnimatorSandbox {
+public class GalleryViewBox extends MirrorSandboxBase {
     private final Context mContext;
 
     public GalleryViewBox(View root) {
@@ -38,7 +38,7 @@ public class GalleryViewBox extends MirrorAnimatorSandbox {
 
 
     @Override
-    public void enterSandbox() {
+    public void $onLayoutDone(final View root) {
         GalleryDatabase database = GalleryViewBoxComponent.Initializer.get(mContext).database();
         Log.d("GBox", "database="+database);
         database.loadGallery(Section.HOT, new EndlessObserver<List<Image>>() {
@@ -50,12 +50,11 @@ public class GalleryViewBox extends MirrorAnimatorSandbox {
 //                images.add(oimages.get(0));
 //                images.add(oimages.get(1));
 
-                GalleryView gallery = (GalleryView) $(R.id.gallery_view).getView();
+                GalleryView gallery = (GalleryView) root.findViewById(R.id.gallery_view);
                 gallery.getAdapter().replaceWith(images);
                 gallery.setDisplayedChildId(R.id.gallery_grid);
             }
         });
-
     }
 
     @Module

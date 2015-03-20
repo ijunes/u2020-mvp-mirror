@@ -43,7 +43,7 @@ dependencies {
     debugCompile 'com.jakewharton.madge:madge:1.1.1'
     debugCompile 'com.jakewharton.scalpel:scalpel:1.1.2'
 
-    debugCompile 'com.jimulabs.mirrorsandbox:mirror-sandbox:0.1.+'
+    debugCompile 'com.jimulabs.mirrorsandbox:mirror-sandbox:0.2.0'
 
     compile 'io.reactivex:rxjava:1.0.4'
     compile 'io.reactivex:rxandroid:0.24.0'

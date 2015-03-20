@@ -11,6 +11,7 @@ import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import retrofit.MockRestAdapter;
 import ru.ltst.u2020mvp.Dagger_GalleryViewBox_GalleryViewBoxComponent;
 import ru.ltst.u2020mvp.R;
 import ru.ltst.u2020mvp.data.api.model.response.Image;
@@ -27,6 +28,9 @@ public class GalleryView extends BetterViewAnimator {
 
     @Inject
     Picasso picasso;
+
+//    @Inject
+//    MockRestAdapter mMockRestAdapter;
 
     private final GalleryAdapter adapter;
 
