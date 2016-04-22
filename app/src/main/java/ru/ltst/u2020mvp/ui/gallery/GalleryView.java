@@ -12,7 +12,7 @@ import javax.inject.Inject;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import retrofit.MockRestAdapter;
-import ru.ltst.u2020mvp.Dagger_GalleryViewBox_GalleryViewBoxComponent;
+import ru.ltst.u2020mvp.DaggerGalleryViewBox_GalleryViewBoxComponent;
 import ru.ltst.u2020mvp.R;
 import ru.ltst.u2020mvp.data.api.model.response.Image;
 import ru.ltst.u2020mvp.ui.base.HasComponent;
@@ -37,7 +37,7 @@ public class GalleryView extends BetterViewAnimator {
     public GalleryView(Context context, AttributeSet attrs) {
         super(context, attrs);
 //        ((HasComponent<Injector>) context).getComponent().inject(this);
-        Dagger_GalleryViewBox_GalleryViewBoxComponent.Initializer.get(context).inject(this);
+        DaggerGalleryViewBox_GalleryViewBoxComponent.Initializer.get(context).inject(this);
         adapter = new GalleryAdapter(getContext(), picasso);
     }
 

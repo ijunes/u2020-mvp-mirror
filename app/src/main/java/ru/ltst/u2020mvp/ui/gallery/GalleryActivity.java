@@ -47,7 +47,7 @@ public class GalleryActivity extends U2020Activity implements HasComponent<Galle
 
     @Override
     protected void onCreateComponent(U2020Component u2020Component) {
-        galleryComponent = Dagger_GalleryComponent.builder().
+        galleryComponent = DaggerGalleryComponent.builder().
                 u2020Component(u2020Component).
                 galleryModule(new GalleryModule()).build();
         galleryComponent.inject(this);

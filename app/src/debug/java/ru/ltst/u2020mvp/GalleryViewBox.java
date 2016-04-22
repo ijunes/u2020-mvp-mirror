@@ -83,7 +83,7 @@ public class GalleryViewBox extends MirrorSandboxBase {
 
             public static GalleryViewBoxComponent get(Context context) {
                 if (sComponent == null) {
-                    GalleryViewBoxComponent component = Dagger_GalleryViewBox_GalleryViewBoxComponent.builder()
+                    GalleryViewBoxComponent component = DaggerGalleryViewBox_GalleryViewBoxComponent.builder()
                             .mirrorApplicationModule(new MirrorApplicationModule(context))
                             .build();
                     sComponent = component;
